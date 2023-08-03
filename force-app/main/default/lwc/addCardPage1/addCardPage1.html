@@ -1,0 +1,21 @@
+<template>
+    <lightning-quick-action-panel header="Payment Terminal">
+        <lightning-card title="Payment Card Details">
+            <div class="slds-p-horizontal_medium">
+                <lightning-radio-group name="radioGroup"
+                label="Choose Payment Method"
+                options={methodOptions}
+                value={methodValue}
+                type="button"></lightning-radio-group>
+            </div>
+            <div class="slds-p-horizontal_medium">
+                <lightning-input label="Card Number" value={cardNumber} onchange={handleCardNumberChange}></lightning-input>
+                <lightning-input label="Cardholder Name" value={cardholderName} onchange={handleCardholderNameChange}></lightning-input>
+                <lightning-input label="Expiration Month" value={expirationMonth} onchange={handleExpirationMonthChange}></lightning-input>
+                <lightning-input label="Expiration Year" value={expirationYear} onchange={handleExpirationYearChange}></lightning-input>
+                <lightning-input label="CVV" value={cvv} onchange={handleCVVChange}></lightning-input>
+                <lightning-button label="Next" onclick={handleNext}></lightning-button>
+            </div>
+        </lightning-card>
+    </lightning-quick-action-panel>
+</template>
