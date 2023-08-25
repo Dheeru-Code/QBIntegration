@@ -1,0 +1,18 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 08-17-2023
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+
+    <ul class="slds-has-dividers_around-space dropZone" 
+    ondrop={handleDrop}
+    ondragover={handleDragOver}
+    style="height:70vh; overflow-y:auto;">
+        <template for:each={records} for:item="recordItem">
+            <c-draggable-card stage={stage} record={recordItem} key={recordItem.Id} onitemdrag={handleItemDrag}></c-draggable-card>
+        </template>
+    </ul>
+</template>

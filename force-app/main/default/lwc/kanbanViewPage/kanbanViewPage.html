@@ -1,0 +1,22 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 08-11-2023
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <div class="card_wrapper">
+        <template for:each={pickVals} for:item="item">
+            <div class="stageContainer" key={item} style={calcWidth}>
+                <lightning-badge label={item} class="slds-theme_success"> </lightning-badge>
+                <!-- <h1 class="column_heading">{item}</h1> -->
+                <c-vertical-panel records={records} stage={item}
+                 onlistitemdrag={handleListItemDrag}
+                 onitemdrop={handleItemDrop}
+                 ></c-vertical-panel>
+            </div>
+            
+        </template>
+    </div>
+</template>

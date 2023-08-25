@@ -1,0 +1,32 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 08-11-2023
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="Select Object & field" icon-name="standard:kanban">
+        <div class="slds-p-around_medium">
+            <lightning-combobox
+                label="Select an Object"
+                placeholder="Select an Object"
+                options={objectOptions}
+                onchange={handleObjectChange}
+            ></lightning-combobox>
+            <lightning-combobox
+                label="Select a Field"
+                placeholder="Select a Field"
+                options={picklistFieldOptions}
+                onchange={handlePicklistFieldChange}
+            ></lightning-combobox>
+        </div>
+    </lightning-card>
+    <lightning-card if:true={isKanbanVisible} title="Kanban View">
+        <lightning-layout>
+            <lightning-layout-item>
+
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>
